@@ -1,0 +1,62 @@
+monitor_market_news_task:
+  description: >
+    Montitor and analyze the latest news and updates related to {topic} and its
+    related financial markets. Identify and summarize the most relevant and
+    impactful news items that could influence market trends or investor decisions. 
+    Utilize financial news APIs and real-time market data tools to gather up-to-date
+    information. Focus on detecting trends, regulatory changes, material rumors, or
+    significant eoconomic indicators that directly relate to {topic} and its market.
+  expected_output: >
+    A daily summary report of the most important news items and market updates as of
+    {datetime}. The report should include  analysis of the potential impact
+    related to {topic}, highlighting key trends, events, and potential impacts on
+    market sentiment or investor behavior. The report should be concise, insightful,
+    and actionable, providing a clear overview of the current state of {topic} markets.
+    It should include key insights, potential market reactions, and potential 
+    implications for content strategy.
+  agent: market_news_monitor_agent
+  
+analyze_market_data_task:
+  description: >
+    Analyze market data and trends related to {topic}, with a focus on uncovering
+    patterns, opportunities, and risks that could be leveraged in content creation. 
+    Use advanced data analytics tools to process large datasets and generate
+    actionable insights. Pay special attention to how {topic} influences market 
+    movements, investor sentiment, and broader economic indicators.
+  expected_output: >
+    A comprehensive analysis report as of {datetime} that highlights key market 
+    trends, patterns, and actionable insights related to {topic}. The report should
+    include data visualizations and clear recommendations for content creation. 
+  agent: data_analyst_agent
+  
+create_content_task:
+  description: >
+    Based on the insights provided by the Market News Monitor and Data Analyst agents, 
+    create high-quality, engaging content that educates and informs the target audience 
+    about {topic}. Produce various types of content, including blog posts and
+    social media updates, that effectively communicate the insights gathered. Ensure 
+    the content clearly conveys the key findings and recommendations related to {topic}. 
+    Incorporate data visualizations, infographics, or other multimedia elements to
+    enhance the content where applicable.
+  expected_output: >
+    A collection of high-quality content pieces related to {topic} and timely as of 
+    {datetime}, including blog posts and social media updates, complete with integrated 
+    multimedia elements.
+  agent: content_creator_agent
+
+quality_assurance_task:
+  description: >
+    Review and refine the content created on {topic} to ensure it meets the highest 
+    standards of accuracy, clarity, and brand alignment. Thoroughly proofread and edit 
+    the content, checking for errors, inconsistencies, and alignment with the brand voice.
+    Ensure that the content accurately reflects the key insights and recommendations 
+    provided by the Data Analyst and Market News Monitor agents. Ensure that the final 
+    content is well-formatted in markdown, using appropriate headers, bullet points, links,
+    and other markdown features to enhance readability and engagement. 
+  expected_output: >
+    A finalized set of content pieces related to {topic} and timely as of {datetime}, 
+    thoroughly reviewed, and formatted in markdown. The content should be well-structured, 
+    with appropriate use of headers, bullet points, links, and other markdown features to 
+    ensure it is both visually appealing and easy to read. Each section should have at 
+    least 2 paragraphs.
+  agent: quality_assurance_agent

@@ -1,0 +1,4 @@
+User name is John Doe.
+User is an Bitcoin trader.
+User is interested in Bitcoin and crypto markets.
+User is based in Los Angeles, California.
